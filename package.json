@@ -1,0 +1,25 @@
+{
+  "name": "parkcontrol",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matiasfessia/parkcontrol.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matiasfessia/parckcontrol/issues"
+  },
+  "scripts": {
+    "start": "live-server",
+    "deploy": "gh-pages -d ."
+  },
+  "homepage": "https://github.com/matiasfessia/parkcontrol/",
+  "devDependencies": {
+    "font-awesome": "^4.7.0",
+    "gh-pages": "^1.2.0",
+    "live-server": "^1.2.0"
+  }
+}
