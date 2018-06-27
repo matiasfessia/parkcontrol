@@ -1,21 +1,21 @@
 {
-  "name": "vtransport",
+  "name": "parkcontrol",
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/matiasfessia/vtransport.git"
+    "url": "git+https://github.com/matiasfessia/parkcontrol.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/matiasfessia/vtransport/issues"
+    "url": "https://github.com/matiasfessia/parkcontrol/issues"
   },
   "scripts": {
     "start": "live-server"
   },
-  "homepage": "https://github.com/matiasfessia/vtransport#readme",
+  "homepage": "https://github.com/matiasfessia/parkcontrol#readme",
   "devDependencies": {
     "font-awesome": "^4.7.0",
     "live-server": "^1.2.0"
