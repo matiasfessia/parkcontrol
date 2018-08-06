@@ -5,14 +5,13 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <title>ParkControl</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" type="text/css" href="styles.css">
     </head>
     <body>
       <header>
-        <h1 class="title" onclick="onHomeBtnClicked()">ParkControl</h1>
-        <button class="btn-menu" onclick="onMenuBtnClicked(event)">Menu</button>
+        <h1 class="title">ParkControl</h1>
+        <button class="btn-menu">Menu</button>
         <div class="menu">
-          <button type="button" onclick="onRatesBtnClicked()">Tarifas</button>
+          <button class="btn-rates" type="button">Tarifas</button>
           <button type="button">Espacios</button>
         </div>
       </header>
@@ -36,12 +35,12 @@
           <h2 class="money-raised"><h2>
           <h3>facturado hoy día</h3>
         </div>
-        <button class="btn btn-checkin" onclick="onCheckinBtnClicked()">INGRESO</button>
-        <button class="btn btn-checkout" onclick="onCheckoutBtnClicked()">SALIDA</button>
+        <button class="btn btn-checkin">INGRESO</button>
+        <button class="btn btn-checkout">SALIDA</button>
       </section>
 
       <section class="checkin">
-        <form onSubmit="checkin(event)" class="add-vehicle-form">
+        <form class="checkin-form">
           <div class="add-vehicle-control">
               <input type="text" id="checkin-license-plate" placeholder="XXX-YYY" autocomplete="off"/>
               <button type="submit">Ingreso</button>
@@ -63,20 +62,19 @@
       </section>
 
       <section class="checkout">
-        <form onSubmit="checkout(event)" class="add-vehicle-form">
+        <form class="checkout-form">
           <div class="add-vehicle-control">
               <input type="text" id="checkout-license-plate" placeholder="XXX-YYY" autocomplete="off"/>
               <button type="submit">SALIDA</button>
           </div>
           <p class="error-msg"></p>
         </form>
-      
         <h2 class="subtitle">Vehiculos <span class="vehicles-counter-badge"></span></h2>
         <ul class="vehicles"></ul>
       </section>
 
       <section class="rates">
-        <form onSubmit="saveRates(event)" class="rates-form">
+        <form class="rates-form">
           <div class="form-control">
               <label>Motos</label>
               <input type="number" id="moto-rate" />
@@ -90,10 +88,9 @@
               <input type="number" id="pickup-rate" />
           </div>
           <button type="submit">Guardar</button>
-          <button type="button" onclick="onDefaultValuesBtnClick()">Restablecer</button>
+          <button type="button" class="btn-default">Restablecer</button>
         </form>
       </section>
       <div class="backdrop"></div>
-      <script src="main.js"></script>      
     </body>
 </html>

@@ -13,11 +13,26 @@
     "url": "https://github.com/matiasfessia/parkcontrol/issues"
   },
   "scripts": {
-    "start": "live-server"
+    "start": "webpack-dev-server --config ./webpack.config.js",
+    "build": "NODE_ENV=production webpack --config ./webpack.config.js --mode=production"
   },
   "homepage": "https://github.com/matiasfessia/parkcontrol#readme",
   "devDependencies": {
+    "autoprefixer": "^8.6.5",
+    "css-loader": "^1.0.0",
     "font-awesome": "^4.7.0",
-    "live-server": "^1.2.0"
+    "html-webpack-plugin": "^3.2.0",
+    "live-server": "^1.2.0",
+    "mini-css-extract-plugin": "^0.4.1",
+    "node-sass": "^4.9.2",
+    "postcss-loader": "^2.1.5",
+    "sass-loader": "^7.0.3",
+    "webpack": "^4.15.1",
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.4"
+  },
+  "dependencies": {
+    "file-loader": "^1.1.11",
+    "moment": "^2.22.2"
   }
 }

@@ -1,5 +1,8 @@
+import moment from 'moment';
+import './styles.scss';
+
 /** */
-const checkin = evt => {
+const handleCheckInFormSubmitedk = evt => {
   evt.preventDefault();
   const licensePlateInput = document.getElementById('checkin-license-plate');
   const vehicleType = document.querySelector('input[name=vehicleType]:checked');
@@ -23,8 +26,8 @@ const checkin = evt => {
   refreshDataView();
 }
 
-/** */
-const checkout = evt => {
+/** Handle the checkout form submission that means to remove the vehicle from checklist, push it to checkout list and charge a rate for the hours that was parked. */
+const handleCheckOutFormSubmited = evt => {
   evt.preventDefault();
   const licensePlateInput = document.getElementById('checkout-license-plate');
   const date = new Date();
@@ -227,6 +230,7 @@ const sectionToogle = sectionToActivate => {
 }
 
 window.addEventListener('click', handleWindowClick);
+
 const menu = document.querySelector('.menu');
 const backdrop = document.querySelector('.backdrop');
 const motosListCheckinDOM = document.querySelector('.checkin .motos-list');
@@ -247,5 +251,20 @@ let checkinData = localStorage.getItem('checkin') ? JSON.parse(localStorage.getI
 let checkoutData = localStorage.getItem('checkout') ? JSON.parse(localStorage.getItem('checkout')) : [];
 let ratesData = localStorage.getItem('rates') ? JSON.parse(localStorage.getItem('rates')) : {moto: 0, car: 0, pickup: 0};
 let moneyRaisedData = localStorage.getItem('moneyRaised') ?localStorage.getItem('moneyRaised') : 0;
+
+
+/** Events of the DOM */
+document.querySelector('header .title').addEventListener('click', e => onHomeBtnClicked());
+document.querySelector('header .btn-menu').addEventListener('click', e => onMenuBtnClicked(e));
+document.querySelector('.dashboard .btn-checkin').addEventListener('click', e => onCheckinBtnClicked());
+document.querySelector('.dashboard .btn-checkout').addEventListener('click', e => onCheckoutBtnClicked());
+
+
+document.querySelector('.rates .btn-rates').addEventListener('click', e => onRatesBtnClicked(e));
+document.querySelector('.rates .btn-default').addEventListener('click', e => onDefaultValuesBtnClick(e));
+document.querySelector('.rates .rates-form').addEventListener('submit', e => saveRates(e));
+
+document.querySelector('.checkin .checkin-form').addEventListener('submit', e => handleCheckInFormSubmitedk(e));
+document.querySelector('.checkout .checkout-form').addEventListener('submit', e => handleCheckOutFormSubmited(e));
 
 refreshDataView();
