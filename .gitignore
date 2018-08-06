@@ -1,2 +1,4 @@
 # Node ignores
 node_modules
+
+dist

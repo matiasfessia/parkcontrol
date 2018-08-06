@@ -1,5 +1,4 @@
 const path = require('path');
-const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const autoprefixer = require('autoprefixer');
@@ -21,7 +20,6 @@ module.exports = {
   },
   module: {
     rules: [
-      // { test: /\.handlebars$/, loader: "handlebars-loader" },
       {
         test: /\.(scss|css)$/,
         use: [
@@ -67,13 +65,6 @@ module.exports = {
     ]
   },
   plugins: [
-    /*
-    new webpack.LoaderOptionsPlugin({
-        options: {
-          handlebarsLoader: {}
-        }
-      }),
-    */
     new MiniCssExtractPlugin({
       filename: "[name]-styles.css",
       chunkFilename: "[id].css"

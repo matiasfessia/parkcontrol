@@ -1,5 +1,6 @@
 import moment from 'moment';
 import './styles.scss';
+import { getVehicleCheckin } from './checkin';
 
 /** */
 const handleCheckInFormSubmitedk = evt => {
@@ -82,6 +83,7 @@ const calculateRate = (dateIn, dateOut, vehicleType) => {
 }
 
 /** */
+/*
 const getVehicleCheckin = (licensePlate) => {
   for (type in checkinData) {
     let result = checkinData[type].find(vehicle => licensePlate === vehicle.licensePlate);
@@ -90,6 +92,7 @@ const getVehicleCheckin = (licensePlate) => {
     }
   }
 }
+*/
 
 /** */
 const saveRates = (evt) => {
@@ -260,7 +263,7 @@ document.querySelector('.dashboard .btn-checkin').addEventListener('click', e =>
 document.querySelector('.dashboard .btn-checkout').addEventListener('click', e => onCheckoutBtnClicked());
 
 
-document.querySelector('.rates .btn-rates').addEventListener('click', e => onRatesBtnClicked(e));
+// document.querySelector('.rates .btn-rates').addEventListener('click', e => onRatesBtnClicked(e));
 document.querySelector('.rates .btn-default').addEventListener('click', e => onDefaultValuesBtnClick(e));
 document.querySelector('.rates .rates-form').addEventListener('submit', e => saveRates(e));
 
